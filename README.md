@@ -1,4 +1,4 @@
-# NotFull
+# NotFul
 
 A minimal audio notes manager
 
