@@ -1,3 +1,7 @@
+import 'package:audio_notes_manager/business/data/audio_note_repository.dart';
+import 'package:audio_notes_manager/business/data/database_helper.dart';
+import 'package:audio_notes_manager/business/model/audio_note.dart';
+import 'package:audio_notes_manager/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,10 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Notful',
+      title: Constants.APP_NAME,
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'Notful'),
+      home: const MyHomePage(title: Constants.APP_NAME),
     );
   }
 }
@@ -69,22 +73,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ]),
       body: SafeArea(
-        child: Material(
-          elevation: 10,
-          child: Container(
-            margin: const EdgeInsets.fromLTRB(20, 20, 20, 20),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
+          child: Material(
+        elevation: 10,
+        child: Container(
+          margin: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(40),
-                border: Border.all(color: Colors.black26, width: 3)),
-            child: const Text(
-              "test",
-              style: TextStyle(fontSize: 32, color: Colors.white),
-              textAlign: TextAlign.center,
-            ),
+              border: Border.all(color: Colors.black26, width: 3)),
+          child: const Text(
+            "test",
+            style: TextStyle(fontSize: 32, color: Colors.white),
+            textAlign: TextAlign.center,
           ),
-        )
-      ),
+        ),
+      )),
       floatingActionButton: FloatingActionButton(
         backgroundColor: ThemeData.dark().canvasColor,
         elevation: 8,
